@@ -5,25 +5,15 @@
 </head>
 <body>
     <h1>Lista de UFs</h1>
-    <sport>
-        <table>
-            <thead>
-                <tr>
-                    <td>Id</td>
-                    <td>Nome</td>
-                    <td>Sigla</td>
-                </tr>
-            </thead>
-            <tbody>
-                <% list.forEach((uf) => { %>
-                <tr>
-                    <td>${list.id}</td>
-                    <td>${uf.nome}</td>
-                    <td>${uf.sigla}</td>
-                </tr>
-            <% })%>
-            </tbody>
-        </table>
-    </sport>
+    <table border = 1>
+        ${d.list.reduce((str, item) => str + '<tr><td>'+item.nome+'</td><td>' + item.sigla + '</td></tr>', '')}
+    </table>
+    <br>
+    <a href="/uf/cadastro">Novo Cadastro Uf</a>
+    <br>    
+    <a href="/cidade/cadastro">Cadastro Cidade</a>
+
+    
+
 </body>
 </html>
