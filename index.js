@@ -14,6 +14,10 @@ server.engine('tl', tl)
 server.set('views', './views') // specify the views directory
 server.set('view engine', 'tl') // register the template engine
 
+server.get('/', function(req , res) {
+    res.render("page");
+});
+
 server.get('/uf/cadastro', uf.cadastro);
 server.get('/uf/lista', uf.lista);
 server.post('/uf/salvar', uf.salvar);

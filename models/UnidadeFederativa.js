@@ -7,7 +7,7 @@ class UnidadeFederativa {
     }
 
     nomeComSigla() {
-        return this.nome + " - " + this.sigla;
+        return this.nome +" - " + this.sigla;
     }
 }
 
